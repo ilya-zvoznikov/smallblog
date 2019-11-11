@@ -19,6 +19,14 @@
         <a href="{% url 'post_new' %}" class="top-menu">
             <i class="fas fa-plus"></i>
         </a>
+        <a href="{% url 'post_draft_list' %}" class="top-menu">
+            <i class="fas fa-edit"></i>
+        </a>
+        <p class="top-menu">Hello {{ user.username }} <small>(<a style="color: white" href="{% url 'logout' %}">Log out</a>)</small></p>
+        {% else %}
+        <a href="{% url 'login' %}" class="top-menu">
+            <i class="fas fa-lock"></i>
+        </a>
         {% endif %}
         <h1><a href="/">Small Blog</a></h1>
     </div>
